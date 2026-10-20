@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>設定読込中</title>
+  <style>
+    /* 背景を真っ白にリセット */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      background-color: #ffffff;  /* 真っ白な背景 */
+      display: flex;              /* フレックスボックスで中央配置 */
+      align-items: center;        /* 垂直方向中央 */
+      justify-content: center;    /* 水平方向中央 */
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    }
+
+    /* 中央のテキスト：灰色で設定読込中 */
+    .loading-text {
+      color: #888888;             /* 灰色 */
+      font-size: 1.5rem;          /* 読みやすいサイズ */
+      font-weight: 400;           /* 標準の太さ */
+      letter-spacing: 0.05em;     /* ほんの少し文字間を広げて上品に */
+      user-select: none;          /* テキスト選択を無効化（任意） */
+      text-align: center;
+      /* 必要に応じてアニメーション等は追加せず、静的な表示 */
+    }
+
+    /* 小さい画面でもバランスが崩れないように調整 */
+    @media (max-width: 480px) {
+      .loading-text {
+        font-size: 1.25rem;       /* スマホでは少し小さめに */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-text">設定読込中</div>
+</body>
+</html>
